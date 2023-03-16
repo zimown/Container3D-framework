@@ -1,0 +1,67 @@
+body {
+    perspective: 450px;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    height: 100%;
+}
+
+.floor {
+    background: url('img/stone.jpg') center;
+}
+
+.ceiling {
+    background: url('img/roof.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.content {
+    background: url('img/frame.png') center;
+    background-size: cover;
+    height: 200px;
+    width: 300px;
+    opacity: 1;
+    margin: auto;
+}
+
+#room-0 .face--front, #room-0 .face--back,#room-0 .face--left, #room-0 .face--right {
+    background-color: rgb(74, 80, 113);
+}
+
+#room-1 .face--front, #room-1 .face--back,#room-1 .face--left, #room-1 .face--right {
+    background-color: rgb(74, 126, 85);
+}
+
+.door {
+    background: url('img/door.png') center no-repeat;
+    background-size: cover;
+    height: 800px;
+    width: 300px;
+    position: fixed;
+    bottom: 0;
+    opacity: 1;
+}
+
+#room-1 .door {
+    background: url('img/the-door.png');
+    height: 650px;
+}
+#room-1 .floor {
+    background: url('img/granada.jpg');
+}
+#room-1 .ceiling {
+    background: url('img/rome-roof2.jpg');
+}
+
+#room-2 .door {
+    background: url('img/the-other-door.png');
+    height: 650px;
+}
+
+#room-1 .art {
+    background: url("img/wall-art.jpg");
+    background-size: cover;
+}

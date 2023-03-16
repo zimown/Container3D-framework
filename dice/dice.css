@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    height: 100%;
+}
+
+#dice {
+    margin: 500px auto auto;
+    height: 153px;
+    width: 153px;
+    transform: rotateY(0deg) translateZ(0px);
+}
+
+#test {
+    perspective: 400px;
+    position: fixed;
+    top: 200px;
+    left: 200px;
+}
