@@ -22,6 +22,7 @@ var Container = function(parent,width,height,depth) {
      * Element representing the container in the DOM
      */
     this.elem;
+    this.parent = parent;
 
     /**
      * Self initiating constructor-method

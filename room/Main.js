@@ -15,12 +15,11 @@ var Main = {
     newRoom : function() {
         var body = document.getElementsByTagName("body")[0];
         var nRoom = new Container(body);
+        nRoom.elem.classList.add("in");
 
         nRoom.faces[0].addContent([new Content("art"),new Content("art"),new Content("art")]);
         nRoom.faces[3].addContent([new Content("art"),new Content("art")]);
         nRoom.faces[1].addContent([new Content("door",Main.changeRoom)]);
-        nRoom.elem.classList.add("in");
-
         nRoom.faces[5].elem.classList.add("floor");
         nRoom.faces[4].elem.classList.add("ceiling");
 
