@@ -30,6 +30,7 @@ var Container = function(parent,width,height,depth) {
      * @returns {null}
      */
     (function container() {
+
         if(!parent || !parent.nodeType) {
             console.log("The parent is " + parent + " and is not considered an element");
             return;

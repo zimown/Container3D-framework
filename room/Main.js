@@ -9,10 +9,13 @@ var Main = {
             Main.existingRooms.push(nRoom);    
             nRoom.elem.id = "room-" + i;
             if(i != 0) nRoom.elem.style.display = 'none';
+            
         }
+        var body = document.getElementsByTagName("body")[0];
+        body.style.perspective = body.offsetWidth/2.7 + "px";
     },
 
-    newRoom : function() {
+    newRoom : function() {        
         var body = document.getElementsByTagName("body")[0];
         var nRoom = new Container(body);
         nRoom.elem.classList.add("in");
