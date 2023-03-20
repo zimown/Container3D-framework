@@ -26,7 +26,24 @@ main {
     margin: auto;
 }
 
-#room-0 .face--front, #room-0 .face--back,#room-0 .face--left, #room-0 .face--right {
+.table {
+    position: fixed;
+    left: 400px;
+}
+
+
+#room-0 .table .face.face--top {
+    background: url('img/wood.jpg') center;
+    background-size: cover;
+}
+#room-0 .table .face {
+    background: url('img/table.png') center no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0);
+
+}
+
+#room-0 .face {
     background-color: rgb(74, 80, 113);
 }
 

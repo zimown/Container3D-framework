@@ -8,8 +8,9 @@ var Main = {
             var nRoom = Main.newRoom();
             Main.existingRooms.push(nRoom);    
             nRoom.elem.id = "room-" + i;
-            if(i != 0) nRoom.elem.style.display = 'none';
-            
+            if(i != 0) nRoom.elem.style.display = 'none'; else {
+                Main.addTable(nRoom);
+            }
         }
         var body = document.getElementsByTagName("body")[0];
         body.style.perspective = body.offsetWidth/2.7 + "px";
@@ -27,6 +28,14 @@ var Main = {
         nRoom.faces[4].elem.classList.add("ceiling");
 
         return nRoom;
+    },
+
+    addTable : function(room) {
+        var table = new Container(room.elem,300,200,200);
+        table.elem.classList.add("table");
+        table.elem.style.top = room.faces[0].elem.offsetHeight - 200 + "px";
+        table.faces[5].elem.style.display = "none";
+        console.log(table.faces[0].elem.offsetWidth)
     },
 
     changeRoom : function() {
