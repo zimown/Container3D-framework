@@ -30,6 +30,7 @@ var Container = function(parent,width,height,depth) {
      * @returns {null}
      */
     (function container() {
+
         if(!parent || !parent.nodeType) {
             console.log("The parent is " + parent + " and is not considered an element");
             return;
@@ -68,10 +69,6 @@ var Container = function(parent,width,height,depth) {
         var x = width || parent.offsetWidth;
         var y = height || parent.offsetHeight;
         var z = depth || width || parent.offsetWidth;
-        self.elem.style.width = x;
-        self.elem.style.height = y;
-        console.log(x)
-
 
         if(typeof x != "number" || typeof y != "number" || typeof z != "number") {
             console.log("The dimensions are not right and the element can't be displayed");
@@ -120,9 +117,9 @@ Container.prototype.showFace = function(type) {
         console.log(type + " is not a string");
         return;
     }
-    if (this.currentFace) {
-        this.elem.classList.remove(this.currentFace);
+    if (Container.currentFace) {
+        this.elem.classList.remove(Container.currentFace);
     }
-    this.currentFace = 'show-' + type;
-    this.elem.classList.add(this.currentFace);
+    Container.currentFace = 'show-' + type;
+    this.elem.classList.add(Container.currentFace);
 }

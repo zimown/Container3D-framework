@@ -86,3 +86,7 @@ body {
 .in.show-bottom {
     transform: translateZ(100px) rotateX(-90deg);
 }
+
+.content {
+    position: fixed;
+}

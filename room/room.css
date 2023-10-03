@@ -17,53 +17,91 @@ main {
     background-size: cover;
 }
 
+.faceContent {
+    display: flex;
+}
+
 .content {
-    background: url('img/frame.png') center;
-    background-size: cover;
-    height: 200px;
-    width: 300px;
+    height: 260px;
+    width: 200px;
     opacity: 1;
-    margin: auto;
+}
+
+#room-0 .content .face--left,#room-0 .content .face--right,#room-0 .content .face--top,#room-0 .content .face--bottom {
+    background: black;
+}
+
+.content .art .face--front,.content .art .face--back {
+    background: rgba(0, 0, 0, 0);
+}
+
+.art .face--back {
+    background: url('img/frame.png') center no-repeat;
+    background-size: cover;   
 }
 
 .table {
-    position: fixed;
     left: 400px;
 }
-
 
 #room-0 .table .face.face--top {
     background: url('img/wood.jpg') center;
     background-size: cover;
 }
+
 #room-0 .table .face {
     background: url('img/table.png') center no-repeat;
     background-size: cover;
     background-color: rgba(0, 0, 0, 0);
+}
 
+#room-0 .wall {
+    background: url('img/abstract.jpg') center no-repeat;
+    background-size: cover;
 }
 
 #room-0 .face {
-    background-color: rgb(74, 80, 113);
+    display: flex;
 }
 
 #room-1 .face--front, #room-1 .face--back,#room-1 .face--left, #room-1 .face--right {
     background-color: rgb(74, 126, 85);
 }
 
-.door {
-    background: url('img/door.png') center no-repeat;
-    background-size: cover;
-    height: 800px;
-    width: 300px;
-    position: fixed;
-    bottom: 0;
-    opacity: 1;
+#room-2 .face--front, #room-2 .face--back,#room-2 .face--left, #room-2 .face--right {
+    background-color: rgb(253, 242, 229);
 }
 
-#room-1 .door {
-    background: url('img/the-door.png');
-    height: 650px;
+#room-2 .ceiling {
+    background: url('img/wood-roof.jpg');
+}
+
+.door .face--back {
+    background: url('img/door.png') center no-repeat;
+    background-size: cover;
+}
+
+.door {
+    height: 800px;
+}
+
+.floorlist .face {
+    background-color: black;
+    
+}
+
+.content.floorlist {
+    height: 20px;
+}
+
+
+.cont.show.content {
+    transition: 0s;
+}
+
+#room-1 .door .face--back {
+    background: url('img/the-door.png') center no-repeat;
+    background-size: cover;   
 }
 #room-1 .floor {
     background: url('img/granada.jpg');
@@ -72,9 +110,9 @@ main {
     background: url('img/rome-roof2.jpg');
 }
 
-#room-2 .door {
-    background: url('img/the-other-door.png');
-    height: 650px;
+#room-2 .door .face--back {
+    background: url('img/the-other-door.png') center no-repeat;
+    background-size: cover;   
 }
 
 #room-1 .art {

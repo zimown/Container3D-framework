@@ -20,14 +20,39 @@ var Main = {
         var body = document.getElementsByTagName("body")[0];
         var nRoom = new Container(body);
         nRoom.elem.classList.add("in");
+        console.log(nRoom);
 
+        //nRoom.faces[1].addContent(["art",200,230,5],["art",200,250,5],["art",200,250,5]);
+        nRoom.faces[0].addContent(["door",400,800,10,Main.changeRoom],["art",300,360,5]);
+        nRoom.faces[1].addContent(["door",400,800,10,Main.changeRoom],["art",300,360,5]);
+
+        nRoom.faces[2].addContent(["art",300,360,5],["art",300,360,5],["art",300,360,5]);
+        nRoom.faces[3].addContent(["art",200,260,5],["art",200,260,5]);
+     
+        Main.addLists(nRoom);
+        /*
         nRoom.faces[0].addContent([new Content("art"),new Content("art"),new Content("art")]);
         nRoom.faces[3].addContent([new Content("art"),new Content("art")]);
         nRoom.faces[1].addContent([new Content("door",Main.changeRoom)]);
+*/
+        //nRoom.faces[3].addContent(["door",200,200,5]);
+
+        nRoom.faces[0].elem.classList.add("wall");
+        nRoom.faces[1].elem.classList.add("wall");
+        nRoom.faces[2].elem.classList.add("wall");
+        nRoom.faces[3].elem.classList.add("wall");
+
         nRoom.faces[5].elem.classList.add("floor");
         nRoom.faces[4].elem.classList.add("ceiling");
 
         return nRoom;
+    },
+
+    addLists : function(room) {
+        for (let i = 0; i < 4;i++) {
+            room.faces[i].addContent(["floorlist",room.faces[0].elem.offsetWidth,20,5]);
+            room.faces[i].addContent(["rooflist",room.faces[0].elem.offsetWidth,30,10]);
+        }
     },
 
     addTable : function(room) {
@@ -35,7 +60,6 @@ var Main = {
         table.elem.classList.add("table");
         table.elem.style.top = room.faces[0].elem.offsetHeight - 200 + "px";
         table.faces[5].elem.style.display = "none";
-        console.log(table.faces[0].elem.offsetWidth)
     },
 
     changeRoom : function() {
