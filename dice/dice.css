@@ -21,3 +21,22 @@ main {
     top: 200px;
     left: 200px;
 }
+
+.face--front  { 
+    background-color: rgb(139, 113, 105);  
+}
+.face--back   { 
+    background-color: rgb(215, 211, 135);  
+}
+.face--right  { 
+    background-color: rgb(114, 153, 187);
+}
+.face--left   { 
+    background-color: rgb(74, 126, 85);
+}
+.face--top    { 
+    background-color: rgb(223, 221, 221); 
+}
+.face--bottom { 
+    background-color: rgb(105, 84, 84); 
+}

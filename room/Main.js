@@ -30,12 +30,6 @@ var Main = {
         nRoom.faces[3].addContent(["art",200,260,5],["art",200,260,5]);
      
         Main.addLists(nRoom);
-        /*
-        nRoom.faces[0].addContent([new Content("art"),new Content("art"),new Content("art")]);
-        nRoom.faces[3].addContent([new Content("art"),new Content("art")]);
-        nRoom.faces[1].addContent([new Content("door",Main.changeRoom)]);
-*/
-        //nRoom.faces[3].addContent(["door",200,200,5]);
 
         nRoom.faces[0].elem.classList.add("wall");
         nRoom.faces[1].elem.classList.add("wall");

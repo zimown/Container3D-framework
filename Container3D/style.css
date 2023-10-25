@@ -28,6 +28,7 @@ body {
     opacity: 0.9;
 }
 
+/*
 .face--front  { 
     background-color: rgb(139, 113, 105);  
 }
@@ -45,7 +46,7 @@ body {
 }
 .face--bottom { 
     background-color: rgb(105, 84, 84); 
-}
+}*/
 
 
 .show-front {

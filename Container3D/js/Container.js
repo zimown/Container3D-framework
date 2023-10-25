@@ -70,8 +70,6 @@ var Container = function(parent,width,height,depth) {
         var z = depth || width || parent.offsetWidth;
         self.elem.style.width = x;
         self.elem.style.height = y;
-        console.log(x)
-
 
         if(typeof x != "number" || typeof y != "number" || typeof z != "number") {
             console.log("The dimensions are not right and the element can't be displayed");

@@ -36,20 +36,12 @@ var Face = function(type) {
 Face.prototype.addContent = function() {
     var i = 0;                 
     var x = arguments.length;
-    /*
-    var faceContent = document.createElement("div");
-    faceContent.classList.add("faceContent",this.type);
-    faceContent.style.translateZ = this.elem.offsetWidth/2-10;
-
-    this.elem.parentNode.appendChild(faceContent);*/
-    //this.elem.appendChild(faceContent)
+    
     while(i < x) {
         var content = new Content(this.elem.parentNode,arguments[i][0],arguments[i][1],arguments[i][2],arguments[i][3],arguments[i][4]);
         this.content.push(content);
         content.type = arguments[i][0];
-
         this.adjustContent(content,x,i,this);
-        
         i++;
     }
 }
@@ -82,27 +74,31 @@ Face.prototype.adjustContent = function(content,n,i) {
             x = 0;
             break;
         case "floorlist":
-            console.log(content.cont.elem)
-
             y = this.elem.offsetHeight-content.cont.elem.offsetHeight;
-            x = 0;
             break;
+    }
+
+    if (content.type == "floorlist" || content.type == "rooflist") {
+        x = -this.elem.offsetWidth/2 + content.cont.elem.offsetWidth/2;
+            switch(this.type) {
+                case "front":
+                    x = 0;
+                    break;
+                case "back":
+                    x = this.elem.offsetWidth-content.cont.elem.offsetWidth;
+                    break;
+            }
     }
 
     switch(this.type) {
         case "front":
             content.cont.elem.style.transform = "rotateY(0deg) translateZ(" + (this.elem.offsetWidth/2-5) + "px) translateY(" + y + "px) translateX(" + x + "px)";
-            //content.style.top = "100px";
             break;
         case "back":
             content.cont.elem.style.transform = "rotateY(180deg) translateZ(" + (this.elem.offsetWidth/2-5) + "px) translateY(" + y + "px) translateX(" + -x + "px)";
-            //faceContent.style.top = this.elem.offsetHeight/2 + "px";
-
             break;
         case "left":
             content.cont.elem.style.transform = "rotateY(-90deg) translateZ(" + (97) + "px) translateY(" + y + "px) translateX(" + x + "px)";
-            //faceContent.style.top = this.elem.offsetHeight/2 + "px";
-
             break;
         case "right":
             console.log(this.elem.offsetWidth-103)

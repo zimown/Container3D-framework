@@ -60,15 +60,12 @@ main {
     background-size: cover;
 }
 
-#room-0 .face {
-    display: flex;
-}
 
-#room-1 .face--front, #room-1 .face--back,#room-1 .face--left, #room-1 .face--right {
+#room-1 .wall{
     background-color: rgb(74, 126, 85);
 }
 
-#room-2 .face--front, #room-2 .face--back,#room-2 .face--left, #room-2 .face--right {
+#room-2 .wall {
     background-color: rgb(253, 242, 229);
 }
 
@@ -85,9 +82,8 @@ main {
     height: 800px;
 }
 
-.floorlist .face {
-    background-color: black;
-    
+.floorlist .face, .rooflist .face {
+    background-color: white;
 }
 
 .content.floorlist {
@@ -116,6 +112,6 @@ main {
 }
 
 #room-1 .art {
-    background: url("img/wall-art.jpg");
+    background: url("img/wall-art.jpg") center no-repeat;
     background-size: cover;
 }
