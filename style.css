@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+
+}
+
+main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100vh;
+    grid-template-areas:
+       "room  dice";
+
+}
+
+h2 {
+    position: fixed;
+    left: 5%;
+}
+
+#room {
+    grid-area: room;
+    background-color: #688049;
+}
+
+#room a {
+    color: #f8e0d1;
+    text-decoration: none;
+    padding: 50%;
+}
+
+#dice {
+    grid-area: dice;
+    background-color: #f8e0d1;
+}
+
+#dice a {
+    color: #688049;
+    text-decoration: none;
+    padding: 50%;
+}
+
+#room, #dice {
+    display: grid;
+    place-items: center;
+}
+
+#room:hover, #dice:hover {
+    opacity: 0.8;
+}
